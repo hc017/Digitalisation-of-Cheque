@@ -1,0 +1,43 @@
+{
+  "name": "digital-cheque-system",
+  "version": "1.0.0",
+  "description": "Digital Cheque Transfer System with MERN Stack",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-server": "npm install",
+    "install-all": "npm run install-server && npm run install-client"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "crypto": "^1.0.1",
+    "socket.io": "^4.7.2",
+    "node-cron": "^3.0.2",
+    "express-rate-limit": "^6.10.0",
+    "helmet": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "digital-cheque",
+    "banking",
+    "mern",
+    "mysql",
+    "blockchain-inspired"
+  ],
+  "author": "Digital Banking Team",
+  "license": "MIT"
+}

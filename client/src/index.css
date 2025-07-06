@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Banking UI Components */
+.banking-card {
+  @apply bg-white rounded-lg shadow-banking border border-banking-200 p-6;
+}
+
+.banking-button {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.banking-button-primary {
+  @apply banking-button bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+.banking-button-secondary {
+  @apply banking-button bg-banking-100 text-banking-700 hover:bg-banking-200 focus:ring-banking-500;
+}
+
+.banking-button-danger {
+  @apply banking-button bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.banking-input {
+  @apply w-full px-3 py-2 border border-banking-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+}
+
+.banking-label {
+  @apply block text-sm font-medium text-banking-700 mb-2;
+}
+
+/* Status badges */
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-pending {
+  @apply status-badge bg-yellow-100 text-yellow-800;
+}
+
+.status-accepted {
+  @apply status-badge bg-green-100 text-green-800;
+}
+
+.status-rejected {
+  @apply status-badge bg-red-100 text-red-800;
+}
+
+.status-cancelled {
+  @apply status-badge bg-gray-100 text-gray-800;
+}
+
+.status-expired {
+  @apply status-badge bg-orange-100 text-orange-800;
+}
+
+/* Loading animation */
+.loading-spinner {
+  @apply animate-spin rounded-full h-6 w-6 border-b-2 border-primary-600;
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Banking gradient */
+.banking-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Cheque design */
+.cheque-design {
+  background: linear-gradient(45deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px solid #cbd5e1;
+  position: relative;
+}
+
+.cheque-design::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #3b82f6 0px,
+    #3b82f6 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Notification styles */
+.notification-enter {
+  transform: translateX(100%);
+}
+
+.notification-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.notification-exit {
+  transform: translateX(0);
+}
+
+.notification-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
