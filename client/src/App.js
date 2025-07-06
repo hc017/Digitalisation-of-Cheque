@@ -13,18 +13,18 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import SendCheque from './pages/SendCheque';
-import ReceivedCheques from './pages/ReceivedCheques';
-import SentCheques from './pages/SentCheques';
-import ChequeDetails from './pages/ChequeDetails';
-import TransactionHistory from './pages/TransactionHistory';
-import Profile from './pages/Profile';
+// import ReceivedCheques from './pages/ReceivedCheques';
+// import SentCheques from './pages/SentCheques';
+// import ChequeDetails from './pages/ChequeDetails';
+// import TransactionHistory from './pages/TransactionHistory';
+// import Profile from './pages/Profile';
 
-// Admin Pages
-import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminUsers from './pages/admin/AdminUsers';
-import AdminCheques from './pages/admin/AdminCheques';
-import AdminTransactions from './pages/admin/AdminTransactions';
-import AdminLogs from './pages/admin/AdminLogs';
+// // Admin Pages
+// import AdminDashboard from './pages/admin/AdminDashboard';
+// import AdminUsers from './pages/admin/AdminUsers';
+// import AdminCheques from './pages/admin/AdminCheques';
+// import AdminTransactions from './pages/admin/AdminTransactions';
+// import AdminLogs from './pages/admin/AdminLogs';
 
 function AppRoutes() {
   const { user } = useAuth();
@@ -46,13 +46,13 @@ function AppRoutes() {
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="send-cheque" element={<SendCheque />} />
-        <Route path="received-cheques" element={<ReceivedCheques />} />
+        {/* <Route path="received-cheques" element={<ReceivedCheques />} />
         <Route path="sent-cheques" element={<SentCheques />} />
         <Route path="cheque/:id" element={<ChequeDetails />} />
         <Route path="transactions" element={<TransactionHistory />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profile" element={<Profile />} /> */}
         
-        {/* Admin Routes */}
+        {/* Admin Routes
         <Route path="admin" element={<AdminRoute />}>
           <Route index element={<Navigate to="/admin/dashboard" replace />} />
           <Route path="dashboard" element={<AdminDashboard />} />
@@ -61,7 +61,7 @@ function AppRoutes() {
           <Route path="transactions" element={<AdminTransactions />} />
           <Route path="logs" element={<AdminLogs />} />
         </Route>
-      }
+      } */}
       </Route>
       
       {/* Catch all */}

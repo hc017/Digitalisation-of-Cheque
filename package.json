@@ -4,6 +4,7 @@
   "description": "Digital Cheque Transfer System with MERN Stack",
   "main": "server.js",
   "scripts": {
+    "start": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/server.js",
     "client": "cd client && npm start",
