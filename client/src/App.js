@@ -61,6 +61,7 @@ function AppRoutes() {
           <Route path="transactions" element={<AdminTransactions />} />
           <Route path="logs" element={<AdminLogs />} />
         </Route>
+      }
       </Route>
       
       {/* Catch all */}
